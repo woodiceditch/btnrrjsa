@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Procedural 3D Glass Aquarium</title>
+  <link rel="icon" href="data:," />
   <style>
     html, body {
       width: 100vw;
@@ -564,8 +565,8 @@
 
     function animate() {
       requestAnimationFrame(animate);
-      const elapsed = clock.getElapsedTime();
       const dt = Math.min(clock.getDelta(), 0.033);
+      const elapsed = clock.elapsedTime;
 
       causticBackdrop.uniforms.time.value = elapsed;
       waterUniforms.time.value = elapsed;
